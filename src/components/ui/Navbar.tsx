@@ -59,7 +59,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="shrink-0" aria-label="Adnan Shoes Home">
             <span className="font-serif text-[22px] font-bold tracking-tight text-foreground">
-              Adnan<span className="text-foreground/40">.</span>
+              Soft Chappal<span className="text-foreground/40">.</span>
             </span>
           </Link>
 

@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 
 import { Toaster } from "@/components/ui/toaster";
-import { Providers } from "@/components/ui/providers"; // ✅ Import the wrapper
+import { Providers } from "@/components/ui/providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,7 +17,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-full flex flex-col font-sans">
         {/* ✅ Sab kuch Providers ke andar wrap karein */}
         <Providers>
-  
           {children}
           <Toaster />
         </Providers>

@@ -417,3 +417,15 @@ export function useListAdminUsers(
     ...options,
   });
 }
+
+
+
+// Order Hooks section mein add karo
+export function useDeleteOrder(
+  options?: UseMutationOptions<null, Error, number>
+) {
+  return useMutation<null, Error, number>({
+    mutationFn: (id) => del(`/api/admin/orders/${id}`),
+    ...options,
+  });
+}

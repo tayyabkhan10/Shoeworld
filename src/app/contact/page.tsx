@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { Footer } from "@/components/ui/Footer";
 import { Navbar } from "@/components/ui/Navbar";
+import  WhatsAppButton  from "@/components/WhatsAppButton"
 import { MapPin, Phone, Mail, Clock, CheckCircle2, Send } from "lucide-react";
 
 const contactInfo = [
@@ -92,8 +93,9 @@ export default function Contact() {
 
   return (
     <div className="w-full">
+      <WhatsAppButton/>
       <Navbar />
-      {/* Hero */}
+   
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm uppercase tracking-widest text-primary-foreground/60 mb-4">We're Here to Help</p>

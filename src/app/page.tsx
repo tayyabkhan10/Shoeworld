@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { useGetFeaturedProducts } from "@/hooks/api";
+import  WhatsAppButton  from "@/components/WhatsAppButton"
 import { ProductCard } from "@/components/shared/ProductCard";
 import { Star, Truck, RefreshCw, Shield, Award, ArrowRight } from "lucide-react";
 
@@ -55,18 +56,18 @@ export default function Home() {
            <section className="relative h-[80vh] min-h-[600px] w-full flex items-center justify-center overflow-hidden bg-muted">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/boots.png" 
+            src="https://images.pexels.com/photos/6910303/pexels-photo-6910303.jpeg" 
             alt="Premium boots" 
-            className="w-full h-full object-cover object-center opacity-80"
+            className="w-full h-full object-cover object-center opacity-99"
           />
           <div className="absolute inset-0 " />
         </div>
         
         <div className="container relative z-10 mx-auto px-4 flex flex-col items-center text-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-foreground mb-6 tracking-tighter">
-            Adnan Shoes
+          <h1 className="text-5xl text-[#E2DFD2] md:text-6xl lg:text-7xl font-serif font-bold  mb-6 tracking-tighter">
+            Soft Chappal
           </h1>
-          <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mb-10">
+          <p className="text-lg text-[#E2DFD2] md:text-lg  max-w-2xl mb-10">
             Premium footwear designed for those who appreciate the details. Explore our curated collection of uncompromising quality.
           </p>
           <div className="flex gap-4">
@@ -128,7 +129,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground mb-3">Why Choose Us</p>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold">The Adnan Promise</h2>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold">The Kashan Promise</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature) => (
@@ -273,6 +274,7 @@ export default function Home() {
         </div>
       </section>
       <Footer/>
+      <WhatsAppButton />
     </main>
   );
 }

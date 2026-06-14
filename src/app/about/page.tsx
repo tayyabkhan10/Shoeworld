@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/ui/Footer";
 import { Navbar } from "@/components/ui/Navbar";
+import  WhatsAppButton  from "@/components/WhatsAppButton"
 import { Heart, Target, Users, Award, Leaf, Zap } from "lucide-react";
 
 const values = [
@@ -59,6 +60,7 @@ const milestones = [
 export default function About() {
   return (
     <div className="w-full">
+      <WhatsAppButton />
       <Navbar />
       <section className="relative py-32 bg-primary text-primary-foreground overflow-hidden">
         <div className="absolute inset-0 opacity-10"

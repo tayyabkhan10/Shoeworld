@@ -36,7 +36,7 @@ export function AdminLayout({ children }: { children: ReactNode }) {
         <div className="h-16 flex items-center px-6 border-b border-gray-100">
           <Link href="/" className="flex items-center gap-2">
             <Store className="h-5 w-5 text-gray-700" />
-            <span className="font-serif text-lg font-bold text-gray-900">Adnan Admin</span>
+            <span className="font-serif text-lg font-bold text-gray-900">Kashan Admin</span>
           </Link>
         </div>
 

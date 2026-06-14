@@ -67,12 +67,12 @@ export async function sendOrderConfirmation(data: OrderEmailData): Promise<void>
 <body style="margin:0;padding:0;background:#f9f9f9;font-family:'Helvetica Neue',Arial,sans-serif;">
   <div style="max-width:600px;margin:40px auto;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
     <div style="background:#111;padding:32px 40px;">
-      <h1 style="margin:0;color:#fff;font-size:22px;letter-spacing:1px;">ADNAN SHOES</h1>
+      <h1 style="margin:0;color:#fff;font-size:22px;letter-spacing:1px;">Soft Chappal</h1>
       <p style="margin:6px 0 0;color:#aaa;font-size:13px;">Order Confirmed</p>
     </div>
     <div style="padding:36px 40px;">
-      <h2 style="margin:0 0 8px;color:#111;">Shukriya, ${data.toName}!</h2>
-      <p style="color:#555;margin:0 0 24px;">Order #${data.orderId} confirm ho gaya hai.</p>
+      <h2 style="margin:0 0 8px;color:#111;">Thankyou, ${data.toName}!</h2>
+      <p style="color:#555;margin:0 0 24px;">Order #${data.orderId} is done.</p>
       <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
         <thead><tr>
           <th style="text-align:left;padding-bottom:12px;color:#888;font-size:11px;text-transform:uppercase;border-bottom:2px solid #eee;">Product</th>
@@ -99,15 +99,15 @@ export async function sendOrderConfirmation(data: OrderEmailData): Promise<void>
       </div>
     </div>
     <div style="background:#f4f4f4;padding:24px 40px;text-align:center;">
-      <p style="margin:0;color:#999;font-size:12px;">Adnan Shoes · Premium Pakistani Footwear</p>
+      <p style="margin:0;color:#999;font-size:12px;">Soft Chappal · Premium Pakistani Footwear</p>
     </div>
   </div>
 </body></html>`;
 
   await transporter.sendMail({
-    from: `"Adnan Shoes" <${process.env.SMTP_USER}>`,
+    from: `"Soft Chappal" <${process.env.SMTP_USER}>`,
     to: data.toEmail,
-    subject: `Order Confirmed #${data.orderId} — Adnan Shoes`,
+    subject: `Order Confirmed #${data.orderId} — Soft Chappal`,
     html,
   });
 }
@@ -124,7 +124,7 @@ export async function sendVerificationEmail(email: string, userId: string): Prom
 <body style="margin:0;padding:0;background:#f9f9f9;font-family:'Helvetica Neue',Arial,sans-serif;">
   <div style="max-width:600px;margin:40px auto;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
     <div style="background:#111;padding:32px 40px;text-align:center;">
-      <h1 style="margin:0;color:#fff;font-size:22px;letter-spacing:1px;">ADNAN SHOES</h1>
+      <h1 style="margin:0;color:#fff;font-size:22px;letter-spacing:1px;">Soft Chappal</h1>
     </div>
     <div style="padding:36px 40px;text-align:center;">
       <h2 style="margin:0 0 16px;color:#111;">Verify Your Email</h2>
@@ -143,15 +143,15 @@ export async function sendVerificationEmail(email: string, userId: string): Prom
       </p>
     </div>
     <div style="background:#f4f4f4;padding:24px 40px;text-align:center;">
-      <p style="margin:0;color:#999;font-size:12px;">Adnan Shoes · Premium Pakistani Footwear</p>
+      <p style="margin:0;color:#999;font-size:12px;">Soft Chappal · Premium Pakistani Footwear</p>
     </div>
   </div>
 </body></html>`;
 
   await transporter.sendMail({
-    from: `"Adnan Shoes" <${process.env.SMTP_USER}>`,
+    from: `"Soft Chappal" <${process.env.SMTP_USER}>`,
     to: email,
-    subject: "Verify Your Email — Adnan Shoes",
+    subject: "Verify Your Email — Soft Chappal",
     html,
   });
 }
@@ -166,7 +166,7 @@ export async function sendPasswordResetEmail(email: string, token: string): Prom
 <body style="margin:0;padding:0;background:#f9f9f9;font-family:'Helvetica Neue',Arial,sans-serif;">
   <div style="max-width:600px;margin:40px auto;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
     <div style="background:#111;padding:32px 40px;text-align:center;">
-      <h1 style="margin:0;color:#fff;font-size:22px;letter-spacing:1px;">ADNAN SHOES</h1>
+      <h1 style="margin:0;color:#fff;font-size:22px;letter-spacing:1px;">Soft Chappal</h1>
     </div>
     <div style="padding:36px 40px;text-align:center;">
       <h2 style="margin:0 0 16px;color:#111;">Reset Your Password</h2>
@@ -185,15 +185,15 @@ export async function sendPasswordResetEmail(email: string, token: string): Prom
       </p>
     </div>
     <div style="background:#f4f4f4;padding:24px 40px;text-align:center;">
-      <p style="margin:0;color:#999;font-size:12px;">Adnan Shoes · Premium Pakistani Footwear</p>
+      <p style="margin:0;color:#999;font-size:12px;">Soft Chappal · Premium Pakistani Footwear</p>
     </div>
   </div>
 </body></html>`;
 
   await transporter.sendMail({
-    from: `"Adnan Shoes" <${process.env.SMTP_USER}>`,
+    from: `"Soft Chappal" <${process.env.SMTP_USER}>`,
     to: email,
-    subject: "Reset Your Password — Adnan Shoes",
+    subject: "Reset Your Password — Soft Chappal",
     html,
   });
 }
@@ -211,7 +211,7 @@ export async function sendOtpVerificationEmail(email: string, otp: string): Prom
 <body style="margin:0;padding:0;background:#f9f9f9;font-family:'Helvetica Neue',Arial,sans-serif;">
   <div style="max-width:600px;margin:40px auto;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
     <div style="background:#111;padding:32px 40px;text-align:center;">
-      <h1 style="margin:0;color:#fff;font-size:22px;letter-spacing:1px;">ADNAN SHOES</h1>
+      <h1 style="margin:0;color:#fff;font-size:22px;letter-spacing:1px;">Soft Chappal</h1>
     </div>
     <div style="padding:36px 40px;text-align:center;">
       <h2 style="margin:0 0 16px;color:#111;">Verify Your Email</h2>
@@ -234,15 +234,15 @@ export async function sendOtpVerificationEmail(email: string, otp: string): Prom
       </p>
     </div>
     <div style="background:#f4f4f4;padding:24px 40px;text-align:center;">
-      <p style="margin:0;color:#999;font-size:12px;">Adnan Shoes · Premium Pakistani Footwear</p>
+      <p style="margin:0;color:#999;font-size:12px;">Soft Chappal · Premium Pakistani Footwear</p>
     </div>
   </div>
 </body></html>`;
 
   await transporter.sendMail({
-    from: `"Adnan Shoes" <${process.env.SMTP_USER}>`,
+    from: `"Soft Chappal" <${process.env.SMTP_USER}>`,
     to: email,
-    subject: "Your Verification Code — Adnan Shoes",
+    subject: "Your Verification Code — Soft Chappal",
     html,
     text: `Your verification code is: ${otp}`, // Plain text fallback
   });

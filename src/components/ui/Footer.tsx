@@ -10,7 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <h3 className="font-serif text-3xl font-bold tracking-tighter mb-4">
-              Adnan<span className="opacity-60">.</span>
+              Soft Chappal<span className="opacity-60">.</span>
             </h3>
             <p className="text-primary-foreground/70 max-w-sm mb-6 leading-relaxed">
               Premium footwear crafted with intention. Step into confidence with our curated collection of boots, sneakers, and formal shoes.
