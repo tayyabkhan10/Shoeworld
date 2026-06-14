@@ -10,6 +10,7 @@ export default function WhatsAppButton() {
     return () => { clearTimeout(show); clearTimeout(hide); };
   }, []);
 
+  
   const handleClick = () => {
     const phone = "923181664079";
     const msg = encodeURIComponent("Assalam o Alaikum! I need some information about slippers.");
