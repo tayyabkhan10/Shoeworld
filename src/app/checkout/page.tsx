@@ -151,7 +151,7 @@ export default function Checkout() {
                 : "border-gray-200 hover:border-gray-300"
             }`}
           >
-            <div className="font-semibold">Online Payment (EasyPaisa)</div>
+            <div className="font-semibold">Online Payment (NayaPay)</div>
             <div className="text-sm text-muted-foreground mt-1">Pay instantly via mobile wallet</div>
           </button>
         </div>
@@ -309,8 +309,8 @@ export default function Checkout() {
             <p className="text-muted-foreground mb-6 text-sm">Please send the exact total amount to the details below:</p>
             
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 p-6 rounded-lg mb-6 text-center space-y-3">
-              <p className="text-3xl font-bold tracking-wider text-gray-900">03100067378</p>
-              <p className="text-lg font-semibold text-green-700">EasyPaisa</p>
+              <p className="text-3xl font-bold tracking-wider text-gray-900">03181664079</p>
+              <p className="text-lg font-semibold text-green-700">NayaPay</p>
               <div className="pt-2 border-t border-green-200 mt-2">
                 <p className="text-sm text-muted-foreground">Amount to Send</p>
                 <p className="text-xl font-bold text-gray-900">{formatPKR(total)}</p>

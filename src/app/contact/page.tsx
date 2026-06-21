@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { Footer } from "@/components/ui/Footer";
 import { Navbar } from "@/components/ui/Navbar";
-import  WhatsAppButton  from "@/components/ui/WhatsAppButton"
+// import  WhatsAppButton  from "@/components/ui/WhatsAppButton"
 import { MapPin, Phone, Mail, Clock, CheckCircle2, Send } from "lucide-react";
 
 const contactInfo = [
@@ -22,7 +22,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    lines: ["kashanrana004@gmail.com", "tk2926868@gmail.com"],
+    lines: ["kashanrana004@gmail.com", "soft-chappal@gmail.com"],
   },
   {
     icon: Clock,
@@ -93,7 +93,7 @@ export default function Contact() {
 
   return (
     <div className="w-full">
-      <WhatsAppButton/>
+      {/* <WhatsAppButton/> */}
       <Navbar />
    
       <section className="py-24 bg-primary text-primary-foreground">

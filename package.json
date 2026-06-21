@@ -72,6 +72,8 @@
     "pg": "^8.21.0",
     "pino": "^9.6.0",
     "pino-http": "^10.4.0",
+    "pusher": "^5.3.4",
+    "pusher-js": "^8.5.0",
     "react": "^19.0.0",
     "react-day-picker": "^10.0.1",
     "react-dom": "^19.0.0",

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Clock, User } from "lucide-react";
 import { Footer } from "@/components/ui/Footer";
 import { Navbar } from "@/components/ui/Navbar";
-import  WhatsAppButton  from "@/components/ui/WhatsAppButton"
+// import  WhatsAppButton  from "@/components/ui/WhatsAppButton"
 const articles = [
   {
     id: 1,
@@ -185,7 +185,7 @@ function ArticleDetail({ slug }: { slug: string }) {
 export default function Journal() {
   return (
     <main id="main-content" className="min-h-screen">
-      <WhatsAppButton />
+      {/* <WhatsAppButton /> */}
       <Navbar />
       {/* Header */}
       <section className="py-24 bg-foreground text-background text-center">

@@ -202,6 +202,8 @@ export const messagesTable = pgTable("messages", {
   mediaType: text("media_type"), // "image" | "video"
   isRead: boolean("is_read").notNull().default(false),
   createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+   isEdited: boolean("is_edited").notNull().default(false),
+  isDeleted: boolean("is_deleted").notNull().default(false),
 });
 
 export type Conversation = typeof conversationsTable.$inferSelect;

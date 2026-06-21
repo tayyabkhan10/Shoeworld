@@ -4,7 +4,7 @@ const testimonials = [
   {
     name: "Sara Ahmed",
     role: "Fashion Blogger, Lahore",
-    text: "Adnan Shoes has completely redefined premium footwear in Pakistan. The quality is unmatched — every pair I've bought has lasted for years.",
+    text: "Soft-Chappal has completely redefined premium footwear in Pakistan. The quality is unmatched — every pair I've bought has lasted for years.",
     rating: 5,
     avatar: "SA",
   },

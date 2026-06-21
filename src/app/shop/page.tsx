@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/ui/Footer";
 import { Navbar } from "@/components/ui/Navbar";
 import { Badge } from "@/components/ui/badge";
-import  WhatsAppButton  from "@/components/ui/WhatsAppButton"
+// import  WhatsAppButton  from "@/components/ui/WhatsAppButton"
 import { Search, SlidersHorizontal, X, ChevronDown, ChevronUp } from "lucide-react";
 
 const SIZES = ["6", "7", "8", "9", "10", "11", "12"];
@@ -211,7 +211,7 @@ function ShopContent() {
 
   return (
     <div>
-      <WhatsAppButton />
+      {/* <WhatsAppButton /> */}
       <Navbar />
     <div className="container mx-auto px-4 py-12">
       

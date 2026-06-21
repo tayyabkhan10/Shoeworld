@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useRef } from "react"
+import Link from "next/link"
 import { Orbitron } from "next/font/google"
 
 const orbitron = Orbitron({
@@ -22,7 +23,7 @@ export default function HeroVideo({ videoSrc, posterSrc, title }: HeroVideoProps
     if (!video) return
     // Force play as soon as enough data is available
     const tryPlay = () => {
-      video.play().catch(() => {})
+      video.play().catch(() => { })
     }
     if (video.readyState >= 3) {
       tryPlay()
@@ -64,13 +65,24 @@ export default function HeroVideo({ videoSrc, posterSrc, title }: HeroVideoProps
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-4 flex flex-col items-center text-center">
+      <div className="container relative z-10 mx-auto bottom-[-70px] lg:bottom-[-30px] px-4 flex flex-col items-center text-center">
         <h1
-          className={`${orbitron.className} relative bottom-[-30px] text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#E2DFD2] mb-6`}
-          style={{ letterSpacing: "3px" }}
-        >
+          className={`${orbitron.className} relative  text-2xl bottom-[-30px] lg:bottom-[-20px] sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#E2DFD2] mb-6`}
+          style={{ letterSpacing: "3px" }}>
           {title}
         </h1>
+        <Link
+          href="/shop"
+          className="group inline-flex flex-col items-center gap-2 text-[#E2DFD2] transition-opacity hover:opacity-80"
+        >
+          <span
+            className="text-xs mt-5 lg:mt-10 sm:text-sm font-semibold uppercase"
+            style={{ letterSpacing: "2px" }}
+          >
+            Explore Now
+          </span>
+          <span className="h-px w-10 bg-[#E2DFD2] transition-all duration-300 group-hover:w-14" />
+        </Link>
       </div>
     </section>
   )
