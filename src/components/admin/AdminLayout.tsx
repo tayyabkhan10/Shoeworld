@@ -9,6 +9,15 @@ import {
   Users, LogOut, ChevronRight, Store,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Orbitron } from "next/font/google";
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-orbitron",
+});
+
+
 
 const navItems = [
   { href: "/admin", label: "Overview", icon: LayoutDashboard },
@@ -36,7 +45,7 @@ export function AdminLayout({ children }: { children: ReactNode }) {
         <div className="h-16 flex items-center px-6 border-b border-gray-100">
           <Link href="/" className="flex items-center gap-2">
             <Store className="h-5 w-5 text-gray-700" />
-            <span className="font-serif text-lg font-bold text-gray-900">Kashan Admin</span>
+            <span className={` ${orbitron.className} tracking-[3px]  font-serif text-lg font-bold text-gray-900`}>Kashan Admin</span>
           </Link>
         </div>
 
@@ -46,8 +55,7 @@ export function AdminLayout({ children }: { children: ReactNode }) {
             return (
               <Link key={item.href} href={item.href}>
                 <div className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all cursor-pointer group ${
-                  active ? "bg-gray-900 text-white shadow-sm" : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
-                }`}>
+                  active ? "bg-gray-900 text-white shadow-sm" : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"}`}>
                   <item.icon className={`h-4 w-4 shrink-0 ${active ? "text-white" : "text-gray-400 group-hover:text-gray-600"}`} />
                   <span>{item.label}</span>
                   {active && <ChevronRight className="h-3.5 w-3.5 ml-auto text-white/60" />}

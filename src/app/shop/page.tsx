@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/ui/Footer";
 import { Navbar } from "@/components/ui/Navbar";
 import { Badge } from "@/components/ui/badge";
-import  WhatsAppButton  from "@/components/WhatsAppButton"
+import  WhatsAppButton  from "@/components/ui/WhatsAppButton"
 import { Search, SlidersHorizontal, X, ChevronDown, ChevronUp } from "lucide-react";
 
 const SIZES = ["6", "7", "8", "9", "10", "11", "12"];
@@ -295,7 +295,7 @@ function ShopContent() {
         {/* Product grid */}
         <div className="flex-1">
           {isLoading ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
               {[1, 2, 3, 4, 5, 6].map((i) => (
                 <div key={i} className="space-y-4">
                   <div className="aspect-[4/5] bg-muted animate-pulse rounded-md" />
@@ -307,7 +307,7 @@ function ShopContent() {
           ) : filteredProducts.length > 0 ? (
             <>
               <p className="text-sm text-muted-foreground mb-6">{filteredProducts.length} product{filteredProducts.length !== 1 ? "s" : ""} found</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
                 {filteredProducts.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}

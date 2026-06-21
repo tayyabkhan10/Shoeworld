@@ -6,7 +6,7 @@ import { eq } from "drizzle-orm";
 import bcrypt from "bcrypt";
 import { createAdminToken, ADMIN_COOKIE_NAME } from "@/lib/admin-auth";
 
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "nailaanjum1530@gmail.com";
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "soft-chappal@gmail.com";
 
 export async function POST(req: NextRequest) {
   try {

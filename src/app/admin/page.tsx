@@ -11,6 +11,14 @@ import { TrendingUp, TrendingDown, Package, ShoppingCart, Users, Banknote, Arrow
 import { format } from "date-fns";
 import { AdminLayout } from "@/components/admin/AdminLayout";
 import { formatPKR } from "@/lib/pkr";
+import { Orbitron } from "next/font/google";
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-orbitron",
+});
+
 
 const statusColors: Record<string, string> = {
   pending: "bg-amber-100 text-amber-700 border-amber-200",
@@ -32,7 +40,7 @@ export default function AdminDashboard() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-gray-900">Dashboard Overview</h1>
+          <h1 className={`${orbitron.className} tracking-widest  text-2xl font-bold text-gray-900`}>Dashboard Overview</h1>
           <p className="text-sm text-gray-500 mt-1">Welcome back, Admin. Here's what's happening today.</p>
         </div>
 

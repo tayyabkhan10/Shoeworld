@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { Footer } from "@/components/ui/Footer";
 import { Navbar } from "@/components/ui/Navbar";
-import  WhatsAppButton  from "@/components/WhatsAppButton"
+import  WhatsAppButton  from "@/components/ui/WhatsAppButton"
 import { MapPin, Phone, Mail, Clock, CheckCircle2, Send } from "lucide-react";
 
 const contactInfo = [

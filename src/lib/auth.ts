@@ -11,7 +11,7 @@ import bcrypt from "bcrypt";
 import { eq } from "drizzle-orm";
 import { sendOtpVerificationEmail } from "@/lib/mailer";
 
-const ADMIN_EMAIL = "nailaanjum1530@gmail.com";
+const ADMIN_EMAIL = "soft-chappal@gmail.com";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: DrizzleAdapter(db, {

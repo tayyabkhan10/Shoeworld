@@ -178,6 +178,35 @@ export const otpVerificationsTable = pgTable("otp_verifications", {
 export type OtpVerification = typeof otpVerificationsTable.$inferSelect;
 export type NewOtpVerification = typeof otpVerificationsTable.$inferInsert;
 
+
+
+export const conversationsTable = pgTable("conversations", {
+  id: text("id").primaryKey().$defaultFn(() => createId()),
+  userId: text("user_id")
+    .notNull()
+    .references(() => usersTable.id, { onDelete: "cascade" }), // normal user, admin implicit hai
+  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+  updatedAt: timestamp("updated_at", { withTimezone: true })
+    .defaultNow()
+    .$onUpdate(() => new Date()),
+});
+
+export const messagesTable = pgTable("messages", {
+  id: text("id").primaryKey().$defaultFn(() => createId()),
+  conversationId: text("conversation_id")
+    .notNull()
+    .references(() => conversationsTable.id, { onDelete: "cascade" }),
+  senderId: text("sender_id").notNull().references(() => usersTable.id),
+  content: text("content"), // nullable, sirf media bhi ho sakta hai
+  mediaUrl: text("media_url"),
+  mediaType: text("media_type"), // "image" | "video"
+  isRead: boolean("is_read").notNull().default(false),
+  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+});
+
+export type Conversation = typeof conversationsTable.$inferSelect;
+export type Message = typeof messagesTable.$inferSelect;
+
 // ── TypeScript Types (Optional - Add only if needed) ──────
 export type User = typeof usersTable.$inferSelect;
 export type NewUser = typeof usersTable.$inferInsert;

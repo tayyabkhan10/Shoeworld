@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Clock, User } from "lucide-react";
 import { Footer } from "@/components/ui/Footer";
 import { Navbar } from "@/components/ui/Navbar";
-import  WhatsAppButton  from "@/components/WhatsAppButton"
+import  WhatsAppButton  from "@/components/ui/WhatsAppButton"
 const articles = [
   {
     id: 1,

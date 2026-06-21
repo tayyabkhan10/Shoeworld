@@ -5,7 +5,7 @@ import { usersTable } from "@/lib/schema";
 import { auth } from "@/lib/auth";
 import { desc } from "drizzle-orm";
 
-const ADMIN_EMAIL = "nailaanjum1530@gmail.com";
+const ADMIN_EMAIL = "soft-chappal@gmail.com";
 
 export async function GET() {
   try {
