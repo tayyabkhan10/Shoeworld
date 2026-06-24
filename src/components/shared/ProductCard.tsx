@@ -27,8 +27,8 @@ export function ProductCard({ product }: { product: Product }) {
         </div>
         <CardContent className="p-0">
           <div className="flex justify-between items-start mb-1">
-            <h3 className="font-semibold text-lg line-clamp-1">{product.name}</h3>
-            <span className="font-medium">{formatPKR(product.price)}</span>
+            <h3 className="font-semibold text-xs md:text-md lg:text-lg line-clamp-1">{product.name}</h3>
+            <span className="font-medium text-xs md:text-md lg:text-lg">{formatPKR(product.price)}</span>
           </div>
           <p className="text-sm text-muted-foreground capitalize">{product.category}</p>
         </CardContent>

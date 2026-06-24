@@ -141,7 +141,7 @@ function useInView(options = {}) {
 function SpotlightCard({ item }: { item: typeof SPOTLIGHT_DATA[0]; index: number }) {
   return (
     <Link
-      href={`/shop/${item.slug}`}
+      href={`/shop`}
       className="group flex-shrink-0 mb-20 w-40 md:w-48 flex flex-col items-center gap-3 p-4 rounded-2xl transition-all duration-300 hover:scale-105"
     >
       {/* Image Container */}

@@ -61,6 +61,7 @@ export default function Checkout() {
       toast({
         title: "Order confirmed",
         description: `Order #${order.id} placed successfully.`,
+        duration : 2000,
       });
       router.push(`/orders/${order.id}`); // ✅ Fixed: setLocation → router.push
     },

@@ -87,3 +87,4 @@ export default function HeroVideo({ videoSrc, posterSrc, title }: HeroVideoProps
     </section>
   )
 }
+

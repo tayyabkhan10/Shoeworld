@@ -216,7 +216,7 @@ function ShopContent() {
     <div className="container mx-auto px-4 py-12">
       
       {/* Header */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
+      <div className="flex flex-col pt-13 md:flex-row justify-between items-start md:items-end mb-8 gap-4">
         <div>
           <h1 className="text-4xl font-serif font-bold mb-2">Collection</h1>
           <p className="text-muted-foreground">Discover our carefully curated footwear.</p>

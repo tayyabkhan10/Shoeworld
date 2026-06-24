@@ -6,14 +6,17 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useGetProduct, useAddToCart, getGetCartQueryKey } from "@/hooks/api";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Check, Minus, Plus, ShoppingBag } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Minus, Plus, ShoppingBag } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { formatPKR } from "@/lib/pkr";
+
 
 export default function ProductDetail() {
   const { id } = useParams();
   const productId = Number(id);
   const { toast } = useToast();
   const queryClient = useQueryClient();
+  const router = useRouter();
 
   const { data: product, isLoading, error } = useGetProduct(productId);
 
@@ -23,15 +26,20 @@ export default function ProductDetail() {
       toast({
         title: "Added to cart",
         description: `${product?.name} has been added to your cart.`,
+        duration : 2000,
       });
     },
     onError: () => {
       toast({
         title: "Failed to add to cart",
-        description: "Please try again later.",
+        description: "Please Login First.",
         variant: "destructive",
       });
-    },
+
+      setTimeout(() => {
+        router.push("/auth/login");
+      }, 500);
+    }
   });
 
   const [selectedSize, setSelectedSize] = useState<string>("");
@@ -88,9 +96,12 @@ export default function ProductDetail() {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <div className="mb-6">
+      <div className="mb-6 flex justify-between">
         <Link href="/shop" className="text-muted-foreground hover:text-foreground flex items-center text-sm transition-colors">
           <ArrowLeft className="mr-2 h-4 w-4" /> Back to Collection
+        </Link>
+        <Link href="/cart" className="text-muted-foreground hover:text-foreground flex items-center text-sm transition-colors">
+          Go to Cart <ArrowRight className="mr-2 ml-2 h-4 w-4" />
         </Link>
       </div>
 
@@ -98,16 +109,16 @@ export default function ProductDetail() {
         {/* Images */}
         <div className="space-y-4">
           <div className="aspect-[4/5] bg-muted rounded-md overflow-hidden bg-background">
-            <img 
-              src={currentImage} 
-              alt={product.name} 
+            <img
+              src={currentImage}
+              alt={product.name}
               className="w-full h-full object-cover"
             />
           </div>
           {allImages.length > 1 && (
             <div className="flex gap-4 overflow-x-auto pb-2">
               {allImages.map((img, idx) => (
-                <button 
+                <button
                   key={idx}
                   onClick={() => setActiveImage(img)}
                   className={`w-20 h-24 shrink-0 rounded-md overflow-hidden border-2 ${currentImage === img ? 'border-primary' : 'border-transparent'}`}
@@ -144,11 +155,10 @@ export default function ProductDetail() {
                     <button
                       key={color}
                       onClick={() => setSelectedColor(color)}
-                      className={`h-10 px-4 rounded-md border text-sm font-medium transition-colors ${
-                        selectedColor === color 
-                          ? 'border-primary bg-primary text-primary-foreground' 
+                      className={`h-10 px-4 rounded-md border text-sm font-medium transition-colors ${selectedColor === color
+                          ? 'border-primary bg-primary text-primary-foreground'
                           : 'border-input hover:border-primary hover:bg-muted'
-                      }`}
+                        }`}
                     >
                       {color}
                     </button>
@@ -168,11 +178,10 @@ export default function ProductDetail() {
                     <button
                       key={size}
                       onClick={() => setSelectedSize(size)}
-                      className={`h-12 rounded-md border flex items-center justify-center text-sm font-medium transition-colors ${
-                        selectedSize === size 
-                          ? 'border-primary bg-primary text-primary-foreground' 
+                      className={`h-12 rounded-md border flex items-center justify-center text-sm font-medium transition-colors ${selectedSize === size
+                          ? 'border-primary bg-primary text-primary-foreground'
                           : 'border-input hover:border-primary hover:bg-muted'
-                      }`}
+                        }`}
                     >
                       {size}
                     </button>
@@ -185,7 +194,7 @@ export default function ProductDetail() {
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wider mb-3">Quantity</h3>
               <div className="flex items-center border rounded-md w-32">
-                <button 
+                <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
                   className="h-12 w-10 flex items-center justify-center hover:bg-muted transition-colors"
                 >
@@ -194,7 +203,7 @@ export default function ProductDetail() {
                 <div className="h-12 flex-1 flex items-center justify-center font-medium border-x">
                   {quantity}
                 </div>
-                <button 
+                <button
                   onClick={() => setQuantity(quantity + 1)}
                   className="h-12 w-10 flex items-center justify-center hover:bg-muted transition-colors"
                 >
@@ -206,8 +215,8 @@ export default function ProductDetail() {
             {/* Add to Cart */}
             <div className="pt-6 border-t">
               {product.inStock ? (
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="w-full h-14 text-base font-semibold rounded-none"
                   onClick={handleAddToCart}
                   disabled={isAdding}
