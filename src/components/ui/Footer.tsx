@@ -70,7 +70,7 @@ export function Footer() {
 
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-primary-foreground/50 gap-4">
         <div>
-           <p>&copy; {new Date().getFullYear()} Adnan Shoes. All rights reserved.</p><br/>
+           <p>&copy; {new Date().getFullYear()} Soft Chappal. All rights reserved.</p><br/>
           <p>Architected, Designed, and Programmed from scratch by Tayyab Khan | Full-Stack Developer</p>
         </div>
           <div className="flex gap-6">
