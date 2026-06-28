@@ -73,7 +73,7 @@ export default function About() {
             Worn with Pride.
           </h1>
           <p className="text-xl text-primary-foreground/70 max-w-2xl mx-auto leading-relaxed">
-            Adnan Shoes was born from a simple belief: exceptional footwear should be accessible, sustainable, and above all — beautifully made.
+            Soft Chapal was born from a simple belief: exceptional footwear should be accessible, sustainable, and above all — beautifully made.
           </p>
         </div>
       </section>
@@ -87,7 +87,7 @@ export default function About() {
               Crafting Confidence, One Pair at a Time
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
-              We started Adnan Shoes because we believed there was a gap in the market — shoes that looked luxury but didn't require a luxury budget. Shoes that told a story and lasted long enough to continue telling it.
+              We started Soft Chappal because we believed there was a gap in the market — shoes that looked luxury but didn't require a luxury budget. Shoes that told a story and lasted long enough to continue telling it.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               From our first workshop in Lahore to serving thousands of customers worldwide, our commitment has never wavered: make the best shoe possible, at the fairest price possible, and stand behind every single pair we sell.

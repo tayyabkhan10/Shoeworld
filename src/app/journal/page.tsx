@@ -12,7 +12,7 @@ const articles = [
     title: "The Art of Leather Craftsmanship in Pakistan",
     excerpt: "Pakistan has a centuries-old tradition of working with leather. From the tanneries of Kasur to the cobblers of Peshawar, we explore how this ancient craft shapes every pair we make.",
     image: "/images/boots.png",
-    author: "Adnan",
+    author: "Kashan",
     readTime: "5 min read",
     date: "May 20, 2025",
   },
@@ -23,7 +23,7 @@ const articles = [
     title: "How to Care for Your Leather Boots",
     excerpt: "A well-maintained pair of leather boots can last a decade. Learn the professional techniques for cleaning, conditioning, and storing your boots to preserve their life and beauty.",
     image: "/images/boots.png",
-    author: "Adnan",
+    author: "Kashan",
     readTime: "4 min read",
     date: "May 14, 2025",
   },
@@ -56,7 +56,7 @@ const articles = [
     title: "Sneakers That Work — From Street to Office",
     excerpt: "The line between casual and formal continues to blur. Discover how to style premium sneakers for the modern Pakistani workplace without compromising on professionalism.",
     image: "/images/sneakers.png",
-    author: "Adnan",
+    author: "Kashan",
     readTime: "3 min read",
     date: "April 22, 2025",
   },
@@ -80,15 +80,15 @@ const articleContent: Record<string, { title: string; body: string }> = {
     title: "The Art of Leather Craftsmanship in Pakistan",
     body: `Pakistan has long been home to some of the world's finest leather artisans. The tanneries of Kasur produce leather that rivals Italian craftsmanship in quality, while the cobblers of Peshawar carry forward traditions passed down through generations.
 
-At Adnan Shoes, we source our leather directly from certified Pakistani tanneries that use vegetable tanning — a slow, sustainable process that produces leather with superior durability and natural beauty. Unlike chrome-tanned leather, which is processed in days, our vegetable-tanned leather takes weeks to develop its character.
+At Soft Chappal, we source our leather directly from certified Pakistani tanneries that use vegetable tanning — a slow, sustainable process that produces leather with superior durability and natural beauty. Unlike chrome-tanned leather, which is processed in days, our vegetable-tanned leather takes weeks to develop its character.
 
 **Why handcrafting matters**
 
-Each pair of Adnan Shoes is touched by human hands at every stage — from the cutting of the upper to the hand-stitching of the welt. This attention to detail means no two pairs are identical. Minor variations in grain, color, and texture are not defects — they're the signature of genuine craft.
+Each pair of Soft Chappal is touched by human hands at every stage — from the cutting of the upper to the hand-stitching of the welt. This attention to detail means no two pairs are identical. Minor variations in grain, color, and texture are not defects — they're the signature of genuine craft.
 
 **The people behind the shoes**
 
-Behind every pair is a team of artisans, many of whom have been working in leather for 20–30 years. We pay fair wages and invest in ongoing training. When you buy Adnan Shoes, you're directly supporting Pakistani craftspeople and their families.
+Behind every pair is a team of artisans, many of whom have been working in leather for 20–30 years. We pay fair wages and invest in ongoing training. When you buy Soft Chappal, you're directly supporting Pakistani craftspeople and their families.
 
 **Caring for handcrafted leather**
 
@@ -190,7 +190,7 @@ export default function Journal() {
       {/* Header */}
       <section className="py-24 bg-foreground text-background text-center">
         <div className="container mx-auto px-6">
-          <p className="text-[11px] uppercase tracking-[0.2em] text-background/40 mb-4">The Adnan Journal</p>
+          <p className="text-[11px] uppercase tracking-[0.2em] text-background/40 mb-4">The Kashan Journal</p>
           <h1 className="text-5xl md:text-6xl font-serif font-bold mb-4">Style. Craft. Story.</h1>
           <p className="text-background/55 max-w-lg mx-auto text-sm leading-relaxed">
             Insights on leather craftsmanship, shoe care, and style from the team behind Pakistan's finest footwear.
