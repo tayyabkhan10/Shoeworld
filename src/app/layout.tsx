@@ -12,7 +12,7 @@ const orbitron = Orbitron({
   variable: "--font-orbitron",
 });
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://soft-chappal.com";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://soft-chappal.vercel.app";
 
 const VIDEO_URL =
   "https://zilbil.store/cdn/shop/videos/c/vp/fc8d9daff78c446da8c18afa24aa22d0/fc8d9daff78c446da8c18afa24aa22d0.HD-1080p-7.2Mbps-39494283.mp4?v=0";
@@ -103,11 +103,11 @@ export const metadata: Metadata = {
 
   // ✅ Verification (Google Search Console mein milega)
   verification: {
-    google: "YOUR_GOOGLE_VERIFICATION_CODE", // 👈 replace karein
+    google: "8e9e4a1d3172b8f7", // 👈 replace karein
   },
 
   // ✅ Category
-  category: "shopping",
+  category: "ecommerce",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
