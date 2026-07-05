@@ -913,7 +913,7 @@ export default function WebsiteHealthDashboard() {
           </motion.div>
 
           <div className="flex justify-between text-[10px] sm:text-xs text-gray-400 pb-3 sm:pb-4 gap-2">
-            <span className="truncate">soft-chappal.vercel.app · health monitor</span>
+            <span className="truncate">softchappal.com · health monitor</span>
             <span className="shrink-0 hidden sm:inline">Auto-refresh every 30s · PageSpeed is on-demand</span>
           </div>
         </div>

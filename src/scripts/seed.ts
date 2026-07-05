@@ -13,7 +13,7 @@ async function seedAdmin() {
   console.log("👤 Admin user seed kar raha hun...");
 
   const hashedPassword = await bcrypt.hash(ADMIN_PASSWORD, 12);
-``
+
   const [existing] = await db
     .select()
     .from(usersTable)

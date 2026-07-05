@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { useGetFeaturedProducts } from "@/hooks/api";
-// import WhatsAppButton from "@/components/ui/WhatsAppButton"
 import { ProductCard } from "@/components/shared/ProductCard";
 import { ArrowRight } from "lucide-react";
 import HeroVideo from "@/components/ui/HeroVideo";
@@ -39,7 +38,7 @@ export default function Home() {
         <div className="flex justify-between items-end mb-8 sm:mb-14">
           <div>
             <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground mb-3">Handpicked</p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">S-Trend</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">New Arrivals</h2>
           </div>
           <Link href="/shop" className="hidden sm:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors link-line">
             View All <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -85,11 +84,3 @@ export default function Home() {
 }
 
 
-// // src/app/page.js
-// export default function Home() {
-//   return (
-//     <main className="text-center" style={{ display: "grid", placeItems: "center", height: "100vh" }}>
-//       <h1>Applicatio Error : Your free tier hosting plan will be ending. Upgrade your plan to continue. </h1>
-//     </main>
-//   );
-// }

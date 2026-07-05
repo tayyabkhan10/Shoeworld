@@ -14,7 +14,7 @@ export async function GET(req: NextRequest) {
 
   const { searchParams } = new URL(req.url);
   const path = searchParams.get("path") || "/";
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://soft-chappal.vercel.app";
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://www.softchappal.com";
 
   const start = performance.now();
   try {

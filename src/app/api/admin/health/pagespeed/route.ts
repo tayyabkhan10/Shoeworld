@@ -66,7 +66,7 @@ export async function GET(req: NextRequest) {
   // regardless of what NEXT_PUBLIC_BASE_URL is set to locally.
   const rawUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
   const isLocal = !rawUrl || /localhost|127\.0\.0\.1|0\.0\.0\.0/.test(rawUrl);
-  const BASE_URL = isLocal ? "https://soft-chappal.vercel.app" : rawUrl;
+  const BASE_URL = isLocal ? "https://www.softchappal.com " : rawUrl;
 
   if (isLocal) {
     console.warn("[PageSpeed] NEXT_PUBLIC_BASE_URL is local/unset — testing production URL instead:", BASE_URL);

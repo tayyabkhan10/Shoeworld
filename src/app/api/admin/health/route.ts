@@ -17,7 +17,7 @@ async function measureTime<T>(fn: () => Promise<T>): Promise<{ result: T; durati
 }
 
 async function checkSSL() {
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://soft-chappal.vercel.app";
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://www.softchappal.com ";
   const httpsActive = BASE_URL.startsWith("https://");
   if (!httpsActive) return { valid: false, grade: "N/A", httpsActive: false };
   try {
@@ -36,7 +36,7 @@ async function checkSSL() {
 }
 
 async function checkSEOFiles() {
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://soft-chappal.vercel.app";
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://www.softchappal.com ";
   const [sitemap, robots] = await Promise.allSettled([
     fetch(`${BASE_URL}/sitemap.xml`, { signal: AbortSignal.timeout(5000) }),
     fetch(`${BASE_URL}/robots.txt`,  { signal: AbortSignal.timeout(5000) }),
@@ -50,7 +50,7 @@ async function checkSEOFiles() {
 }
 
 async function checkAllPageLoads() {
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://soft-chappal.vercel.app";
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://www.softchappal.com ";
   const results = await Promise.allSettled(
     WEBSITE_PAGES.map(async (page) => {
       const start = performance.now();

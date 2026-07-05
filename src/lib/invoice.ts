@@ -4,7 +4,7 @@ import autoTable from "jspdf-autotable";
 const STORE = {
   name: "Soft Chappal",
   tagline: "Premium Footwear & Fashion",
-  website: "soft-chappal.vercel.app",
+  website: "softchappal.com",
   email: "kashanrana004@gmail.com",
   phone: "03036157070",
   address: "Multan, Punjab, Pakistan",

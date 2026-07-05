@@ -53,7 +53,7 @@ export default function HeroVideo({ videoSrc, posterSrc, title }: HeroVideoProps
           preload="auto"
           // fetchpriority tells browser this is the most important resource
           // @ts-ignore — valid HTML attribute, TS types lag behind
-          fetchpriority="high"
+          fetchPriority="high"
           aria-hidden="true"
         />
         <img
