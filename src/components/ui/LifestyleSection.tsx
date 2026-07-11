@@ -1,3 +1,5 @@
+
+
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
@@ -11,16 +13,9 @@ import {
   AnimatePresence,
 } from "framer-motion";
 
-const preloadImages = (urls: string[]) => {
-  urls.forEach((url) => {
-    const img = new window.Image();
-    img.src = url;
-  });
-};
-
 const cards = [
   {
-    src: "https://images.pexels.com/photos/6592321/pexels-photo-6592321.jpeg?auto=compress&cs=tinysrgb&w=800&fit=crop",
+    src: "/images/nn.jpeg",
     tag: "Street Style",
     num: "01",
     title: "Walk with purpose.",
@@ -28,7 +23,7 @@ const cards = [
     category: "Men's Collection",
   },
   {
-    src: "https://images.pexels.com/photos/20526389/pexels-photo-20526389.jpeg?auto=compress&cs=tinysrgb&w=800&fit=crop",
+    src: "/images/oo.jpeg",
     tag: "Everyday",
     num: "02",
     title: "Comfort meets craft.",
@@ -36,7 +31,7 @@ const cards = [
     category: "Women's Edit",
   },
   {
-    src: "https://images.pexels.com/photos/13943624/pexels-photo-13943624.jpeg?auto=compress&cs=tinysrgb&w=800&fit=crop",
+    src: "/images/pp.jpeg",
     tag: "Artisan",
     num: "03",
     title: "Made by hand, worn with pride.",
@@ -44,7 +39,7 @@ const cards = [
     category: "Heritage Series",
   },
   {
-    src: "https://images.pexels.com/photos/25685852/pexels-photo-25685852.jpeg?auto=compress&cs=tinysrgb&w=800&fit=crop",
+    src: "/images/qq.jpeg",
     tag: "Lifestyle",
     num: "04",
     title: "From dawn to dusk.",
@@ -52,7 +47,7 @@ const cards = [
     category: "Daily Essentials",
   },
   {
-    src: "https://images.pexels.com/photos/13791334/pexels-photo-13791334.jpeg?auto=compress&cs=tinysrgb&w=800&fit=crop",
+    src: "/images/rr.jpeg",
     tag: "Premium",
     num: "05",
     title: "Elevate your step.",
@@ -60,7 +55,7 @@ const cards = [
     category: "Signature Line",
   },
   {
-    src: "https://images.pexels.com/photos/7870741/pexels-photo-7870741.jpeg?auto=compress&cs=tinysrgb&w=800&fit=crop",
+    src: "/images/ss.jpeg",
     tag: "Craft",
     num: "06",
     title: "Details that matter.",
@@ -68,7 +63,7 @@ const cards = [
     category: "Artisan Craft",
   },
   {
-    src: "https://images.pexels.com/photos/9319402/pexels-photo-9319402.jpeg?auto=compress&cs=tinysrgb&w=800&fit=crop",
+    src: "/images/tt.jpeg",
     tag: "Modern",
     num: "07",
     title: "Redefining tradition.",
@@ -76,7 +71,7 @@ const cards = [
     category: "Contemporary",
   },
   {
-    src: "https://images.pexels.com/photos/26965809/pexels-photo-26965809.jpeg?auto=compress&cs=tinysrgb&w=800&fit=crop",
+    src: "/images/uu.jpeg",
     tag: "Essential",
     num: "08",
     title: "Your daily companion.",
@@ -85,13 +80,14 @@ const cards = [
   },
 ];
 
-
 function LifestyleCard({
   card,
   index,
+  priority,
 }: {
   card: (typeof cards)[0];
   index: number;
+  priority: boolean;
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -159,7 +155,7 @@ function LifestyleCard({
       }}
       viewport={{ once: true, margin: "-80px" }}
     >
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden bg-neutral-100">
         <motion.div
           className="relative w-full h-full"
           animate={{ scale: isHovered ? 1.1 : 1 }}
@@ -176,8 +172,9 @@ function LifestyleCard({
                 ? "grayscale(0%) brightness(1)"
                 : "grayscale(20%) brightness(0.95)",
             }}
-            priority={index < 3}
-            quality={85}
+            priority={priority}
+            loading={priority ? undefined : "lazy"}
+            quality={75}
           />
         </motion.div>
 
@@ -302,9 +299,10 @@ export default function LifestyleSection() {
     { stiffness: 100, damping: 30 }
   );
 
-  useEffect(() => {
-    preloadImages(cards.map((c) => c.src));
-  }, []);
+  // NOTE: manual preloading removed — Next.js <Image priority> already
+  // handles eager loading for the first visible cards. Manually fetching
+  // raw <img> tags here was causing a duplicate, non-optimized download
+  // of every image on mount, which was the main cause of slowness.
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -312,10 +310,10 @@ export default function LifestyleSection() {
 
     const scrollStep = () => {
       if (!el || isPausedRef.current) return;
-      
+
       const { scrollLeft, scrollWidth, clientWidth } = el;
       const maxScroll = scrollWidth - clientWidth;
-      
+
       if (scrollLeft >= maxScroll - 10) {
         el.scrollTo({ left: 0, behavior: "smooth" });
       } else {
@@ -403,7 +401,15 @@ export default function LifestyleSection() {
         >
           <div className="flex-shrink-0 w-0 md:w-[2vw]" />
           {duplicatedCards.map((card, i) => (
-            <LifestyleCard key={i} card={card} index={i % cards.length} />
+            <LifestyleCard
+              key={i}
+              card={card}
+              index={i % cards.length}
+              // only the very first set (the one actually visible on load)
+              // gets eager/priority loading — sets 2 & 3 are off-screen
+              // duplicates for the marquee and should always be lazy.
+              priority={i < 3}
+            />
           ))}
           <div className="flex-shrink-0 w-0 md:w-[2vw]" />
         </div>

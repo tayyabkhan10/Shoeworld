@@ -11,14 +11,16 @@ const orbitron = Orbitron({
   variable: "--font-orbitron",
 });
 
-// ── DUMMY DATA - SANDALS/CHAPPALS/SLIPPERS FROM PEXELS ──────────────────────
+// ── DUMMY DATA - SANDALS/CHAPPALS/SLIPPERS ──────────────────────
+// IMPORTANT: images public/images/ folder ke andar honi chahiye.
+// e.g. public/images/aa.jpeg  ->  src: "/images/aa.jpeg"
 const SPOTLIGHT_DATA = [
   {
     _id: "1",
     name: "Olive Leather Sandals",
     slug: "olive-leather-sandals",
     image: {
-      url: "https://images.pexels.com/photos/26925256/pexels-photo-26925256.jpeg?auto=compress&cs=tinysrgb&w=400",
+      src: "/images/aa.jpeg",
       alt: "Olive Leather Sandals",
     },
   },
@@ -27,7 +29,7 @@ const SPOTLIGHT_DATA = [
     name: "Buckle Leather Slides",
     slug: "buckle-leather-slides",
     image: {
-      url: "https://images.pexels.com/photos/31451006/pexels-photo-31451006.jpeg?auto=compress&cs=tinysrgb&w=400",
+      src: "/images/bb.jpeg",
       alt: "Buckle Leather Slides",
     },
   },
@@ -36,7 +38,7 @@ const SPOTLIGHT_DATA = [
     name: "Bow Strap Slides",
     slug: "bow-strap-slides",
     image: {
-      url: "https://images.pexels.com/photos/9790407/pexels-photo-9790407.jpeg?auto=compress&cs=tinysrgb&w=400",
+      src: "/images/mm.jpg",
       alt: "Bow Strap Slides",
     },
   },
@@ -45,7 +47,7 @@ const SPOTLIGHT_DATA = [
     name: "Zebra Print Flip Flops",
     slug: "zebra-print-flip-flops",
     image: {
-      url: "https://images.pexels.com/photos/4996772/pexels-photo-4996772.jpeg?auto=compress&cs=tinysrgb&w=400",
+      src: "/images/cc.jpeg",
       alt: "Zebra Print Flip Flops",
     },
   },
@@ -54,7 +56,7 @@ const SPOTLIGHT_DATA = [
     name: "Sport Flip Flops",
     slug: "sport-flip-flops",
     image: {
-      url: "https://images.pexels.com/photos/18186215/pexels-photo-18186215.jpeg?auto=compress&cs=tinysrgb&w=400",
+      src: "/images/dd.jpeg",
       alt: "Sport Flip Flops",
     },
   },
@@ -63,7 +65,7 @@ const SPOTLIGHT_DATA = [
     name: "Casual Flip Flops",
     slug: "casual-flip-flops",
     image: {
-      url: "https://images.pexels.com/photos/24818423/pexels-photo-24818423.jpeg?auto=compress&cs=tinysrgb&w=400",
+      src: "/images/ee.jpeg",
       alt: "Casual Flip Flops",
     },
   },
@@ -72,17 +74,17 @@ const SPOTLIGHT_DATA = [
     name: "Beach Flip Flops",
     slug: "beach-flip-flops",
     image: {
-      url: "https://images.pexels.com/photos/7862555/pexels-photo-7862555.jpeg?auto=compress&cs=tinysrgb&w=400",
+      src: "/images/ff.jpeg",
       alt: "Beach Flip Flops",
     },
   },
   {
     _id: "8",
-    name: "Classic Beach Sandals",
-    slug: "classic-beach-sandals",
+    name: "Classic Beach Chappals",
+    slug: "classic-beach-chappals",
     image: {
-      url: "https://images.pexels.com/photos/4996974/pexels-photo-4996974.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Classic Beach Sandals",
+      src: "/images/jj.jpeg",
+      alt: "Classic Beach Chappals",
     },
   },
   {
@@ -90,7 +92,7 @@ const SPOTLIGHT_DATA = [
     name: "Blue Rubber Flip Flops",
     slug: "blue-rubber-flip-flops",
     image: {
-      url: "https://images.pexels.com/photos/14934601/pexels-photo-14934601.jpeg?auto=compress&cs=tinysrgb&w=400",
+      src: "/images/kk.jpeg",
       alt: "Blue Rubber Flip Flops",
     },
   },
@@ -99,17 +101,8 @@ const SPOTLIGHT_DATA = [
     name: "Havaianas Style Flip Flops",
     slug: "havaianas-style-flip-flops",
     image: {
-      url: "https://images.pexels.com/photos/34447685/pexels-photo-34447685.jpeg?auto=compress&cs=tinysrgb&w=400",
+      src: "/images/ll.avif",
       alt: "Havaianas Style Flip Flops",
-    },
-  },
-  {
-    _id: "11",
-    name: "Pink Bedroom Slippers",
-    slug: "pink-bedroom-slippers",
-    image: {
-      url: "https://images.pexels.com/photos/8416418/pexels-photo-8416418.jpeg?auto=compress&cs=tinysrgb&w=400",
-      alt: "Pink Bedroom Slippers",
     },
   },
 ];
@@ -138,21 +131,30 @@ function useInView(options = {}) {
 }
 
 // ── SPOTLIGHT ITEM COMPONENT ───────────────────────────────────
-function SpotlightCard({ item }: { item: typeof SPOTLIGHT_DATA[0]; index: number }) {
+function SpotlightCard({
+  item,
+  priority = false,
+}: {
+  item: typeof SPOTLIGHT_DATA[0];
+  index: number;
+  priority?: boolean;
+}) {
   return (
     <Link
       href={`/shop`}
       className="group flex-shrink-0 mb-20 w-40 md:w-48 flex flex-col items-center gap-3 p-4 rounded-2xl transition-all duration-300 hover:scale-105"
     >
       {/* Image Container */}
-      <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden  shadow-sm group-hover:shadow-lg transition-all duration-500">
+      <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden bg-neutral-100 shadow-sm group-hover:shadow-lg transition-all duration-500">
         <Image
-          src={item.image.url}
+          src={item.image.src}
           alt={item.image.alt || item.name}
           fill
           className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
           sizes="(max-width: 768px) 128px, 160px"
-          unoptimized
+          quality={70}
+          priority={priority}
+          loading={priority ? undefined : "lazy"}
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
       </div>
@@ -191,34 +193,43 @@ export default function SpotlightSection() {
 
       {/* Content */}
       <div className="relative">
-        
-
         {/* Scrolling Track — right to left, infinite, never pauses */}
         <div className="flex spotlight-marquee-track">
-          {/* Set 1 */}
+          {/* Set 1 — only first set gets priority, it's the one visible on load */}
           <div className="flex gap-4 md:gap-8 pr-4 md:pr-8 flex-shrink-0">
             {SPOTLIGHT_DATA.map((item, index) => (
-              <SpotlightCard key={`set1-${item._id}-${index}`} item={item} index={index} />
+              <SpotlightCard
+                key={`set1-${item._id}-${index}`}
+                item={item}
+                index={index}
+                priority={index < 4}
+              />
             ))}
           </div>
           {/* Set 2 - Duplicate */}
           <div className="flex gap-4 md:gap-8 pr-4 md:pr-8 flex-shrink-0">
             {SPOTLIGHT_DATA.map((item, index) => (
-              <SpotlightCard key={`set2-${item._id}-${index}`} item={item} index={index + SPOTLIGHT_DATA.length} />
+              <SpotlightCard
+                key={`set2-${item._id}-${index}`}
+                item={item}
+                index={index + SPOTLIGHT_DATA.length}
+              />
             ))}
           </div>
           {/* Set 3 - Duplicate */}
           <div className="flex gap-4 md:gap-8 flex-shrink-0">
             {SPOTLIGHT_DATA.map((item, index) => (
-              <SpotlightCard key={`set3-${item._id}-${index}`} item={item} index={index + SPOTLIGHT_DATA.length * 2} />
+              <SpotlightCard
+                key={`set3-${item._id}-${index}`}
+                item={item}
+                index={index + SPOTLIGHT_DATA.length * 2}
+              />
             ))}
           </div>
         </div>
       </div>
 
       {/* Infinite Scroll CSS - moves continuously right to left, no pause on hover */}
-      {/* Plain <style> tag (not styled-jsx) — avoids the "jsx-xxxx" class hash
-          that was causing a hydration mismatch and silently breaking the animation */}
       <style>{`
         @keyframes spotlightMarqueeScroll {
           from {
