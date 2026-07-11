@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Orbitron } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
 import { Providers } from "@/components/ui/providers";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const orbitron = Orbitron({
@@ -153,6 +154,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
           <Toaster />
         </Providers>
+        <SpeedInsights />
       </body>
     </html>
   );
