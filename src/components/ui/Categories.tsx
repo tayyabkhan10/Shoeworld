@@ -2,9 +2,9 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react";
 
 const categories = [
-  { href: "/shop?category=boots", img: "/images/boots.png", label: "Boots", desc: "Bold & Durable" },
-  { href: "/shop?category=sneakers", img: "/images/sneakers.png", label: "Sneakers", desc: "Casual & Comfortable" },
-  { href: "/shop?category=loafers", img: "/images/loafers.png", label: "Loafers", desc: "Smart & Refined" },
+  { href: "/shop?category=Slide", img: "/images/ee.jpeg  ", label: "Slides", desc: "Bold & Durable" },
+  { href: "/shop?category=PU Sole", img: "/images/aa.jpeg", label: "PU Sole", desc: "Casual & Comfortable" },
+  { href: "/shop?category=Flip Flops", img: "/images/ff.jpeg", label: "Flip Flops", desc: "Smart & Refined" },
 ];
 
 export default function Categories() {

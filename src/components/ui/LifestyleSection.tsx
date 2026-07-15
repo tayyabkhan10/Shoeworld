@@ -371,7 +371,7 @@ export default function LifestyleSection() {
           </div>
           <div className="text-right">
             <div className="text-4xl sm:text-5xl md:text-6xl font-extralight text-neutral-900 tracking-[-0.03em] leading-none mb-1 sm:mb-1.5">
-              S-Trend
+              Featured Collection
             </div>
             <p className="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] text-neutral-400">
               Series
