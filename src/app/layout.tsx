@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Orbitron } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
 import { Providers } from "@/components/ui/providers";
+import FacebookPixel from "@/components/ui/Facebookpixel";
 import "./globals.css";
 
 const orbitron = Orbitron({
@@ -149,6 +150,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-full flex flex-col font-sans">
+        <FacebookPixel />
         <Providers>
           {children}
           <Toaster />
