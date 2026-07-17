@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
 
@@ -12,7 +12,7 @@ declare global {
 
 const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID;
 
-export default function FacebookPixel() {
+function PixelPageViewTracker() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -22,8 +22,15 @@ export default function FacebookPixel() {
     }
   }, [pathname, searchParams]);
 
+  return null;
+}
+
+export default function FacebookPixel() {
   return (
     <>
+      <Suspense fallback={null}>
+        <PixelPageViewTracker />
+      </Suspense>
       <Script
         id="fb-pixel"
         strategy="afterInteractive"
