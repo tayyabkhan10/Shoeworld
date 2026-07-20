@@ -1,7 +1,7 @@
 import { Truck, RefreshCw, Shield, Award } from "lucide-react";
 
 const features = [
-  { icon: Truck, title: "Free Shipping", desc: "Free delivery on orders over Rs. 25,000 anywhere in Pakistan." },
+  { icon: Truck, title: "Free Shipping", desc: "Free delivery on orders over Rs. 28,000 anywhere in Pakistan." },
   { icon: RefreshCw, title: "Easy Returns", desc: "30-day hassle-free return policy. No questions asked." },
   { icon: Shield, title: "Authenticity Guaranteed", desc: "Every pair is genuine, certified, and quality-checked." },
   { icon: Award, title: "Premium Quality", desc: "Handcrafted from the finest leathers and materials." },
