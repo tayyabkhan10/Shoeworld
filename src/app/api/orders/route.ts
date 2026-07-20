@@ -7,7 +7,7 @@ import { auth } from "@/lib/auth";
 import { sendOrderConfirmation } from "@/lib/mailer";
 
 const FREE_SHIPPING_THRESHOLD = 28000;
-const SHIPPING_COST = 500;
+const SHIPPING_COST = 300;
 
 async function buildOrderResponse(orderId: number) {
   const [order] = await db.select().from(ordersTable).where(eq(ordersTable.id, orderId));
