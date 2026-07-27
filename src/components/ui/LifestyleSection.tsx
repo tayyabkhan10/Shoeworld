@@ -15,7 +15,7 @@ import {
 
 const cards = [
   {
-    src: "/images/nn.jpeg",
+    src: "/images/nn.jpe",
     tag: "Street Style",
     num: "01",
     title: "Walk with purpose.",
@@ -23,7 +23,7 @@ const cards = [
     category: "Men's Collection",
   },
   {
-    src: "/images/oo.jpeg",
+    src: "/images/oo.jpe",
     tag: "Everyday",
     num: "02",
     title: "Comfort meets craft.",
@@ -31,7 +31,7 @@ const cards = [
     category: "Women's Edit",
   },
   {
-    src: "/images/pp.jpeg",
+    src: "/images/pp.jpe",
     tag: "Artisan",
     num: "03",
     title: "Made by hand, worn with pride.",
@@ -39,7 +39,7 @@ const cards = [
     category: "Heritage Series",
   },
   {
-    src: "/images/qq.jpeg",
+    src: "/images/qq.jpe",
     tag: "Lifestyle",
     num: "04",
     title: "From dawn to dusk.",
@@ -47,7 +47,7 @@ const cards = [
     category: "Daily Essentials",
   },
   {
-    src: "/images/rr.jpeg",
+    src: "/images/rr.jpe",
     tag: "Premium",
     num: "05",
     title: "Elevate your step.",
@@ -55,7 +55,7 @@ const cards = [
     category: "Signature Line",
   },
   {
-    src: "/images/ss.jpeg",
+    src: "/images/ss.jpe",
     tag: "Craft",
     num: "06",
     title: "Details that matter.",
@@ -63,7 +63,7 @@ const cards = [
     category: "Artisan Craft",
   },
   {
-    src: "/images/tt.jpeg",
+    src: "/images/tt.jpe",
     tag: "Modern",
     num: "07",
     title: "Redefining tradition.",
@@ -71,7 +71,7 @@ const cards = [
     category: "Contemporary",
   },
   {
-    src: "/images/uu.jpeg",
+    src: "/images/uu.jpe",
     tag: "Essential",
     num: "08",
     title: "Your daily companion.",

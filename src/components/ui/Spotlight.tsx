@@ -20,7 +20,7 @@ const SPOTLIGHT_DATA = [
     name: "Olive Leather Sandals",
     slug: "olive-leather-sandals",
     image: {
-      src: "/images/aa.jpeg",
+      src: "/images/aa.jpe",
       alt: "Olive Leather Sandals",
     },
   },
@@ -29,7 +29,7 @@ const SPOTLIGHT_DATA = [
     name: "Buckle Leather Slides",
     slug: "buckle-leather-slides",
     image: {
-      src: "/images/bb.jpeg",
+      src: "/images/bb.jpe",
       alt: "Buckle Leather Slides",
     },
   },
@@ -38,7 +38,7 @@ const SPOTLIGHT_DATA = [
     name: "Bow Strap Slides",
     slug: "bow-strap-slides",
     image: {
-      src: "/images/mm.jpg",
+      src: "/images/mm.jp",
       alt: "Bow Strap Slides",
     },
   },
@@ -47,7 +47,7 @@ const SPOTLIGHT_DATA = [
     name: "Zebra Print Flip Flops",
     slug: "zebra-print-flip-flops",
     image: {
-      src: "/images/cc.jpeg",
+      src: "/images/cc.jpe",
       alt: "Zebra Print Flip Flops",
     },
   },
@@ -56,7 +56,7 @@ const SPOTLIGHT_DATA = [
     name: "Sport Flip Flops",
     slug: "sport-flip-flops",
     image: {
-      src: "/images/dd.jpeg",
+      src: "/images/dd.jpe",
       alt: "Sport Flip Flops",
     },
   },
@@ -65,7 +65,7 @@ const SPOTLIGHT_DATA = [
     name: "Casual Flip Flops",
     slug: "casual-flip-flops",
     image: {
-      src: "/images/ee.jpeg",
+      src: "/images/ee.jpe",
       alt: "Casual Flip Flops",
     },
   },
@@ -74,7 +74,7 @@ const SPOTLIGHT_DATA = [
     name: "Beach Flip Flops",
     slug: "beach-flip-flops",
     image: {
-      src: "/images/ff.jpeg",
+      src: "/images/ff.jpe",
       alt: "Beach Flip Flops",
     },
   },
@@ -83,7 +83,7 @@ const SPOTLIGHT_DATA = [
     name: "Classic Beach Chappals",
     slug: "classic-beach-chappals",
     image: {
-      src: "/images/jj.jpeg",
+      src: "/images/jj.jpe",
       alt: "Classic Beach Chappals",
     },
   },
@@ -92,7 +92,7 @@ const SPOTLIGHT_DATA = [
     name: "Blue Rubber Flip Flops",
     slug: "blue-rubber-flip-flops",
     image: {
-      src: "/images/kk.jpeg",
+      src: "/images/kk.jpe",
       alt: "Blue Rubber Flip Flops",
     },
   },
@@ -101,7 +101,7 @@ const SPOTLIGHT_DATA = [
     name: "Havaianas Style Flip Flops",
     slug: "havaianas-style-flip-flops",
     image: {
-      src: "/images/ll.avif",
+      src: "/images/ll.avi",
       alt: "Havaianas Style Flip Flops",
     },
   },
