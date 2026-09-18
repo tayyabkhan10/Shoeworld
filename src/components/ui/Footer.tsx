@@ -10,7 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <h3 className="font-serif text-3xl font-bold tracking-tighter mb-4">
-              Soft Chappal<span className="opacity-60">.</span>
+              Shoe World<span className="opacity-60">.</span>
             </h3>
             <p className="text-primary-foreground/70 max-w-sm mb-6 leading-relaxed">
               Premium footwear crafted with intention. Step into confidence with our curated collection of boots, sneakers, and formal shoes.
@@ -70,7 +70,7 @@ export function Footer() {
 
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-primary-foreground/50 gap-4">
         <div>
-           <p>&copy; {new Date().getFullYear()} Soft Chappal. All rights reserved.</p><br/>
+           <p>&copy; {new Date().getFullYear()} Shoe World. All rights reserved.</p><br/>
           <p>Architected, Designed, and Programmed from scratch by Tayyab Khan | Full-Stack Developer</p>
         </div>
           <div className="flex gap-6">

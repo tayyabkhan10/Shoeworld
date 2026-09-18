@@ -1,5 +1,5 @@
 {
-  "name": "Soft Chappal",
+  "name": "Shoe World",
   "short_name": "SoftChappal",
   "description": "Handcrafted premium chappals made in Pakistan. Comfortable, durable, and stylish footwear for men and women.",
   "start_url": "/",
@@ -44,7 +44,7 @@
       "src": "/og-image.jpg",
       "sizes": "1200x630",
       "type": "image/jpeg",
-      "label": "Soft Chappal Homepage"
+      "label": "Shoe World Homepage"
     }
   ],
   "shortcuts": [
@@ -58,7 +58,7 @@
     {
       "name": "About Us",
       "short_name": "About",
-      "description": "Learn about Soft Chappal",
+      "description": "Learn about Shoe World",
       "url": "/about",
       "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
     }

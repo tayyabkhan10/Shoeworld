@@ -23,8 +23,8 @@ const POSTER_URL =
 export const metadata: Metadata = {
   // ✅ Basic
   title: {
-    default: "Soft Chappal | Premium Pakistani Footwear",
-    template: "%s | Soft Chappal",
+    default: "Shoe World | Premium Pakistani Footwear",
+    template: "%s | Shoe World",
   },
   description:
     "Handcrafted premium chappals made in Pakistan. Comfortable, durable, and stylish footwear for men and women. Shop online with fast delivery across Pakistan.",
@@ -32,15 +32,15 @@ export const metadata: Metadata = {
 
   // ✅ Keywords
   keywords: [
-    "chappal", "soft chappal", "Pakistani chappal", "chappals online",
+    "chappal", "Shoe World", "Pakistani chappal", "chappals online",
     "men chappal", "women chappal", "handmade chappal", "premium footwear Pakistan",
     "buy chappal online", "chappal Pakistan delivery",
   ],
 
   // ✅ Authors & Publisher
-  authors: [{ name: "Soft Chappal", url: BASE_URL }],
-  creator: "Soft Chappal",
-  publisher: "Soft Chappal",
+  authors: [{ name: "Shoe World", url: BASE_URL }],
+  creator: "Shoe World",
+  publisher: "Shoe World",
 
   // ✅ Canonical & Alternate
   alternates: {
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_PK",
     url: BASE_URL,
-    siteName: "Soft Chappal",
-    title: "Soft Chappal | Premium Pakistani Footwear",
+    siteName: "Shoe World",
+    title: "Shoe World | Premium Pakistani Footwear",
     description:
       "Handcrafted premium chappals made in Pakistan. Comfortable, durable & stylish. Shop now with fast delivery.",
     images: [
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
         url: POSTER_URL,
         width: 1200,
         height: 630,
-        alt: "Soft Chappal — Premium Pakistani Footwear",
+        alt: "Shoe World — Premium Pakistani Footwear",
       },
     ],
   },
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   // ✅ Twitter / X Card
   twitter: {
     card: "summary_large_image",
-    title: "Soft Chappal | Premium Pakistani Footwear",
+    title: "Shoe World | Premium Pakistani Footwear",
     description:
       "Handcrafted premium chappals made in Pakistan. Shop online with fast delivery.",
     images: [POSTER_URL],
@@ -125,7 +125,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Store",
-              name: "Soft Chappal",
+              name: "Shoe World",
               url: BASE_URL,
               logo: `${BASE_URL}/logo.png`,
               image: POSTER_URL,

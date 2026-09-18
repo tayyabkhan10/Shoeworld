@@ -87,7 +87,7 @@ export default function About() {
               Crafting Confidence, One Pair at a Time
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
-              We started Soft Chappal because we believed there was a gap in the market — shoes that looked luxury but didn't require a luxury budget. Shoes that told a story and lasted long enough to continue telling it.
+              We started Shoe World because we believed there was a gap in the market — shoes that looked luxury but didn't require a luxury budget. Shoes that told a story and lasted long enough to continue telling it.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               From our first workshop in Lahore to serving thousands of customers worldwide, our commitment has never wavered: make the best shoe possible, at the fairest price possible, and stand behind every single pair we sell.

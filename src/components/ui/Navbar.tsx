@@ -72,9 +72,9 @@ export function Navbar() {
           <div className="flex items-center justify-between px-6 py-2.5 rounded-full border backdrop-blur-xl border-white/60 shadow-[0_8px_32px_0_rgba(0,0,0,0.08)] transition-all duration-300">
 
             {/* Logo */}
-            <Link href="/" className="shrink-0 relative z-50" aria-label="Soft Chappal Home">
+            <Link href="/" className="shrink-0 relative z-50" aria-label="Shoe World Home">
               <span className={` ${orbitron.className}  text-[22px] font-bold tracking-widest text-neutral-900 drop-shadow-sm`}>
-                Soft Chappal
+                Shoe World
               </span>
             </Link>
 
@@ -227,7 +227,7 @@ export function Navbar() {
             {/* Mobile Header */}
             <div className="flex items-center justify-between pb-6 border-b border-neutral-200/60">
               <span className="text-[22px] font-bold tracking-tight text-neutral-900">
-                Soft Chappal<span className="text-neutral-400">.</span>
+                Shoe World<span className="text-neutral-400">.</span>
               </span>
               <button
                 onClick={() => setMobileOpen(false)}

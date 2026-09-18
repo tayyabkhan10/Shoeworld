@@ -2,7 +2,7 @@ import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 
 const STORE = {
-  name: "Soft Chappal",
+  name: "Shoe World",
   tagline: "Premium Footwear & Fashion",
   website: "softchappal.com",
   email: "kashanrana004@gmail.com",
@@ -279,7 +279,7 @@ doc.line(totalX - 2, totalY - 1, W - mg + 2, totalY - 1);
   doc.setFont("helvetica", "normal");
   doc.setFontSize(7);
   doc.setTextColor(100, 100, 100);
-  doc.text("We appreciate your trust in Soft Chappal", mg, thankY + 4);
+  doc.text("We appreciate your trust in Shoe World", mg, thankY + 4);
 
   const termsY = thankY + 12;
   doc.setFont("helvetica", "bold");

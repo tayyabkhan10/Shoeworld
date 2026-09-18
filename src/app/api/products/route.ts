@@ -1,7 +1,7 @@
 import { db } from "@/lib/db";
 import { productsTable } from "@/lib/schema";
 import { NextResponse } from "next/server";
-import { eq, ilike, gte, lte, and, type SQL } from "drizzle-orm";
+import { eq, ilike, gte, lte, and, arrayOverlaps, type SQL } from "drizzle-orm";
 import { z } from "zod";
 import { auth } from "@/lib/auth";
 
@@ -26,6 +26,8 @@ const ListParams = z.object({
   minPrice: z.coerce.number().optional(), maxPrice: z.coerce.number().optional(),
   featured: z.coerce.boolean().optional(), size: z.string().optional(),
   color: z.string().optional(),
+  limit: z.coerce.number().min(1).max(100).optional(),
+  offset: z.coerce.number().min(0).optional(),
 });
 
 export async function GET(request: Request) {
@@ -39,12 +41,19 @@ export async function GET(request: Request) {
     if (q.minPrice != null) conditions.push(gte(productsTable.price, String(q.minPrice)));
     if (q.maxPrice != null) conditions.push(lte(productsTable.price, String(q.maxPrice)));
     if (q.featured != null) conditions.push(eq(productsTable.featured, q.featured));
+    // size/color filtering now happens in SQL, not in JS after fetch
+    if (q.size) conditions.push(arrayOverlaps(productsTable.sizes, [q.size]));
+    if (q.color) conditions.push(arrayOverlaps(productsTable.colors, [q.color]));
 
-    let products = await db.select().from(productsTable)
-      .where(conditions.length ? and(...conditions) : undefined);
+    const limit = q.limit ?? 60;
+    const offset = q.offset ?? 0;
 
-    if (q.size) products = products.filter((p) => p.sizes?.includes(q.size!));
-    if (q.color) products = products.filter((p) => p.colors?.includes(q.color!));
+    const products = await db
+      .select()
+      .from(productsTable)
+      .where(conditions.length ? and(...conditions) : undefined)
+      .limit(limit)
+      .offset(offset);
 
     return NextResponse.json(products.map(toProduct));
   } catch (err) {

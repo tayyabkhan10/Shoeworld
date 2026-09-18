@@ -80,15 +80,15 @@ const articleContent: Record<string, { title: string; body: string }> = {
     title: "The Art of Leather Craftsmanship in Pakistan",
     body: `Pakistan has long been home to some of the world's finest leather artisans. The tanneries of Kasur produce leather that rivals Italian craftsmanship in quality, while the cobblers of Peshawar carry forward traditions passed down through generations.
 
-At Soft Chappal, we source our leather directly from certified Pakistani tanneries that use vegetable tanning — a slow, sustainable process that produces leather with superior durability and natural beauty. Unlike chrome-tanned leather, which is processed in days, our vegetable-tanned leather takes weeks to develop its character.
+At Shoe World, we source our leather directly from certified Pakistani tanneries that use vegetable tanning — a slow, sustainable process that produces leather with superior durability and natural beauty. Unlike chrome-tanned leather, which is processed in days, our vegetable-tanned leather takes weeks to develop its character.
 
 **Why handcrafting matters**
 
-Each pair of Soft Chappal is touched by human hands at every stage — from the cutting of the upper to the hand-stitching of the welt. This attention to detail means no two pairs are identical. Minor variations in grain, color, and texture are not defects — they're the signature of genuine craft.
+Each pair of Shoe World is touched by human hands at every stage — from the cutting of the upper to the hand-stitching of the welt. This attention to detail means no two pairs are identical. Minor variations in grain, color, and texture are not defects — they're the signature of genuine craft.
 
 **The people behind the shoes**
 
-Behind every pair is a team of artisans, many of whom have been working in leather for 20–30 years. We pay fair wages and invest in ongoing training. When you buy Soft Chappal, you're directly supporting Pakistani craftspeople and their families.
+Behind every pair is a team of artisans, many of whom have been working in leather for 20–30 years. We pay fair wages and invest in ongoing training. When you buy Shoe World, you're directly supporting Pakistani craftspeople and their families.
 
 **Caring for handcrafted leather**
 
