@@ -45,7 +45,6 @@ export default function AdminDashboard() {
 
   const isLoading = isStatsLoading || isTopLoading || isOrdersLoading;
 
-  // Stat card config — all values from real API
   const statCards = stats
     ? [
         {
